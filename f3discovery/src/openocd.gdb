@@ -16,6 +16,7 @@ set style sources off
 # Initialize monitoring so iprintln! macro output
 # is sent from the itm port to itm.txt
 # monitor tpiu config internal itm.txt uart off 8000000
+monitor stm32f3x.tpiu disable
 monitor stm32f3x.tpiu configure -protocol uart -traceclk 8000000 -pin-freq 1000000 -output itm.txt -formatter off
 monitor stm32f3x.tpiu enable
 
